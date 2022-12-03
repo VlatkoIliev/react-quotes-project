@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import './App.css';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import { Quote } from './interfaces/Quote';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import QuotesList from './pages/QuotesList';
+import RandomQuote from './pages/RandomQuote';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path='/' element={<QuotesList />} />
+        <Route path='/random-quote' element={<RandomQuote />} />
+      </Routes>
+    </>
   );
 }
 

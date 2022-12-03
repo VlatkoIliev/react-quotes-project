@@ -1,38 +1,73 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: dodgerblue;
+  color: white;
+  position: fixed;
+  z-index: 1;
+}
+
+.header__logo {
+  display: block;
+  margin: 20px;
+  font-size: 24px;
+}
+
+.quote {
+  padding: 20px;
+}
+
+.loader {
+  padding-top: 150px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn-container {
+  max-width: 350px;
+  width: 350px;
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   color: white;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.btn--get-quote {
+  background-color: goldenrod;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn--back {
+  text-decoration: none;
+  background-color: chocolate;
+}
+
+.btn--get-random {
+  text-decoration: none;
+  background-color: goldenrod;
 }
